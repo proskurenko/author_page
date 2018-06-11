@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Proskurenko D.</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12" id = "name">
+                <h1 class="text-center"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> &nbsp;&nbsp;&nbsp;Проскуренко Дмитрий Владимирович</h1>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">PROSKURENKO >>></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../education/">Образование</a></li>
+                    <li><a href="../experience/">Опыт работы</a></li>
+                    <li><a href="../publication/">Публикации</a></li>
+                    <li><a href="..characteristic/">Характеристика</a></li>
+                    <li><a href="../projects/">Проекты</a></li>
+                    
+                    <li class="active"><a href="vlog/">Видеоблог</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="jumbotron">
+                    <h1 style="color: red; background-color: black; text-align: center;"><b>YouTube</b></h1>
+                    <br>
+                    <p>Иногда, когда есть о чем снять видео или просто что-то поведать Youtube-сообществу снимаю и монтирую видео, которые выкладываю на своем непопулярном канале с весьма странным и режущим слух названием...</p>
+                    <p>Описывать о том, зачем завел канал и почему такое странное название, специально не буду, так для этого мною специально выложен ролик "О канале", представленный для просмотра ниже. </p>
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DZ4z0Gip5Q4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+                    <p>Перейдя по ссылке:</p> <h3><a href="https://www.youtube.com/channel/UC-CcTb_C7JJhLctsQ8GHN5w" target="_blank"><span class="label label-danger">YouTube</span></a></h3> <p>можно ознакомиться с контентом канала. </p>
+                </div>
+            </div>
+             <div class="col-xs-2"></div>
+         </div>
+     </div>
+     <hr>
+     {% include 'page/message.html' %}
+ </body>
+</html>

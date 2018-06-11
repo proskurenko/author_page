@@ -1,0 +1,457 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Proskurenko D.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+         
+    <script data-require="jquery@1.10.0" data-semver="1.10.0" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  
+  <!-- Скрипт открытия программы расчета ИТП в окне браузера(только Internet Exploer -->
+  
+    <script type="text/javascript" language="javascript">
+        function RunFile() {
+        WshShell = new ActiveXObject("WScript.Shell");
+        WshShell.Run("Project1.exe", 1, false);
+        }
+    </script> <!-- конец скрита-->
+<!-- CSS оформление для ссылки на подальное окно "Портфолио" -->
+   <style type="text/css">
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+</style>
+</head>
+<body>
+	 <div class="container-fluid">
+	    <div class="row">
+            <div class="col-xs-12" id = "name">
+                <h1 class="text-center"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> &nbsp;&nbsp;&nbsp;Проскуренко Дмитрий Владимирович</h1>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">PROSKURENKO >>></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../education/">Образование</a></li>
+                    <li><a href="../experience/">Опыт работы</a></li>
+                    <li><a href="../publication/">Публикации</a></li>
+                    <li><a href="../characteristic/">Характеристика</a></li>
+                    <li class="active"><a href="projects/">Проекты</a></li>
+                    
+                    <li><a href="../vlog/">Видеоблог</a></li>
+                    
+                  
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="alert alert-info" role="alert"><h1>Проект #1</h1></div>
+                <div class="page-header">
+                    <h3>Исследование и разработка технологических вариантов внепечной обработки стали и разливка стали на МНЛЗ сверхнизкоуглеродистых марок сталей (IF) с целью обеспечения их необходимой чистоты.</h3>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h4>Личный вклад в проект</h4></div>
+                    <div class="panel-body">
+                        <p>Целью проекта является разработка технологических рекомендаций для оптимизации схемы производства стали класса IF.</p>
+                        <p> Личное участие состояло в исследовании поведения межфазной поверхности "шлак-металл" при перемешивании расплава в агрегате ковш-печь (АКП). </p>
+                        <p>Это достигалось путем лабораторного исследования отобранных проб металла и шлака на предмет изучения формы металличекой дисперсии металлической фазы в шлаке. О некоторых результатах этого исследования можно узнать в опубликованной <a href="https://link.springer.com/article/10.1134/S0036029510060029" target="_blank">статье</a>.</p>
+                        <p>По результатам исследования также был получен <a href="http://base.uipv.org/searchINV/search.php?action=viewdetails&IdClaim=131387" target="_blank">патент</a> на полезную модель. </p>
+                    </div>
+                </div>
+
+            </div>
+             <div class="col-xs-2"></div>
+        </div>
+    </div>
+     <hr> 
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="alert alert-info" role="alert"><h1>Проект #2</h1></div>
+                <div class="page-header">
+                    <h3>Разработка состава уплотнительной вставки между погружным стаканом и стаканом-дозатором МНЛЗ для снижения вторичного окисления стали в процессе непрерывной разливки. </h3>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h4>Личный вклад в проект</h4></div>
+                    <div class="panel-body">
+                        <p>Цель проекта - предложить к изготовлению для практического применения состав уплотнительной вставки из эластичного огнеупорного материала, который бы при его применении в месте между погружным стаканом и стаканом-дозатором МНЛЗ обеспечивал бы герметичную их состыковку, в течение всей разливки.</p>
+                        <p> Личное участие состояло именно в лабораторном исследовании образцов различного композиционного огнеупорного состава с целью предложения нужного для изготовления изделия.</p>
+                        <p> Результатом исследования стало промышленное изготовление и успешное внедрение.</p>
+                        <p>С графической информацией этого проекта можно ознакомиться из <a href="#"onclick="openModal();currentSlide(3)" class="hover-shadow">портфолио</a></p>
+                        
+                    </div>
+                </div>
+
+            </div>
+             <div class="col-xs-2"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="alert alert-info" role="alert"><h1>Проект #3</h1></div>
+                <div class="page-header">
+                    <h3>Разработка состава огнеупорной саморазрушающейся пробки, устанавливаемой в летке конвертера, для отсечки шлака при выпуске стали в ковш.</h3>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h4>Личный вклад в проект</h4></div>
+                    <div class="panel-body">
+                        <p>Цель проекта - дать практические рекомендации по составу пластичного огнеупорного материала, который бы надежно закупоривал отверстие летки конвертера, но в момент выпуска, легко разрушался бы при контакте с ванной жидкой стали в момент опрокидывания ковертера. </p>
+                        <p> Личное участие состояло в подборе композитного состава такого огнеупора, который бы саморазрушался в нужный момент. Для этого нужно было испытать в лабораторных условиях необходимое количестко образцов проектного состава, нужное количество именно для получения требуемого. По результатам исследования был предложен оптимальный состав для практического испытания. </p>
+                        <p> К сожалению, дальше лабораторных испытаний, проект развития не получил.</p>
+                        <p>С графической информацией этого проекта частично можно ознакомиться из <a href="#"onclick="openModal();currentSlide(9)" class="hover-shadow">портфолио</a></p>
+                        
+                    </div>
+                </div>
+
+            </div>
+             <div class="col-xs-2"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="alert alert-info" role="alert"><h1>Проект #4</h1></div>
+                <div class="page-header">
+                    <h3>Рафинирование металла в промежуточном ковше МНЛЗ с целью повышения чистоты стали и снижения зарастания погружного стакана.</h3>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h4>Личный вклад в проект</h4></div>
+                    <div class="panel-body">
+                        <p>Цель проекта - разработать технологию повышения чистоты стали путем частичного рафинирования ее в промежуточном ковше МНЛЗ.</p>
+                        <p> Личное участие состояло в изучении структры зарастания погружного стакана, исследования механизма этого явления. По результатам исследования были предложены запатентованные <a href="http://base.uipv.org/searchINV/search.php?action=viewdetails&IdClaim=153529" target="_blank">устройство для рафинирования металлического распава</a> и <a href="http://base.uipv.org/searchINV/search.php?action=viewdetails&IdClaim=170320" target="_blank">способ </a>.</p>
+                        <p>С графической информацией этого проекта частично можно ознакомиться из <a href="#"onclick="openModal();currentSlide(16)" class="hover-shadow">портфолио</a></p>
+                        
+                    </div>
+                </div>
+
+            </div>
+             <div class="col-xs-2"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="alert alert-info" role="alert"><h1>Проект #5</h1></div>
+                <div class="page-header">
+                    <h3>Проектирование основного плавильного оборудования цеха.</h3>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><h4>Личный вклад в проект</h4></div>
+                    <div class="panel-body">
+                        <p>Цель проекта - спроектировать необходимое оборудование для плавильно-литейного цеха, где основным плавильным агрегатом должна быть индукционная тигальная печь.</p>
+                        <p> Моим заданием было именно расчёт основых параметров индукционный тигельной печи. Результат задания был представлен в виде, разработанной на языке программирования Delphi 7, небольшой программы, которая учитывает все необходимые технологические параметры. </p>
+                        <!-- <p>С графической информацией этого проекта частично можно ознакомиться во ознакомительный целях запустив программу непосредственно из браузера. Для запуска программы непосредственно из браузера необходимы следующие условия и действия:
+                        </p>
+                        <ol>
+                            <li class="list-group-item"> Только если у Вас установлена операционная система Windows XP, Vista, 7, 8, 10</li>
+                            <li class="list-group-item"> Программа открывается только в браузере Internet Exploer. Другие браузеры, такие как, Opera, Chrome, FireFox не разрешают исполнять подобные скрипты.</li>
+                            <li class="list-group-item"> После открытия страницы в браузере Internet Exploer необходимо нажать внизу окна страницы "Разрешить заблокированное содержимое".</li>
+                            <li class="list-group-item"> После нажания на кнопку "Запустить", появится окно с предупреждением о том, что страница может содержать опасные программы. Нужно нажать на кнопку "Да". Ничего опасного тут нет. Просто программа была из Delphi 7 сконвертирована в отдельный исполняемый файл .exe, который браузер воспринимает, как потенциально опасный. </li>
+                            <li class="list-group-item">Появляется окно с заданными по умолчанию параметрами. Далее необходимо либо изменить параметры (массу плавки) и нажать "Расчёт", либо принять значения по умолчанию и нажать "Расчёт". После этого всплывет еще одно окно для задания еще одного параметра, после чего нажимаем "Далее" и получаем результат расчета.</li>
+                        </ol>
+
+                        <input type="button" value="Запустить" onclick="RunFile();"/> -->
+                    </div>
+                </div>
+
+            </div>
+             <div class="col-xs-2"></div>
+        </div>
+    </div>
+    <hr>
+<!--Модальное окно портфолио-->    
+        <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 18</div>
+      <img src="../../static/images/portpholio/img1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 18</div>
+      <img src="../../static/images/portpholio/img2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 18</div>
+      <img src="../../static/images/portpholio/img3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 18</div>
+      <img src="../../static/images/portpholio/img4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 18</div>
+      <img src="../../static/images/portpholio/img5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 18</div>
+      <img src="../../static/images/portpholio/img6.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 18</div>
+      <img src="../../static/images/portpholio/img7.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 18</div>
+      <img src="../../static/images/portpholio/img8.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">9 / 18</div>
+      <img src="../../static/images/portpholio/img9.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">10 / 18</div>
+      <img src="../../static/images/portpholio/img10.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">11 / 18</div>
+      <img src="../../static/images/portpholio/img11.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">12 / 18</div>
+      <img src="../../static/images/portpholio/img12.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">13 / 18</div>
+      <img src="../../static/images/portpholio/img13.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">14 / 18</div>
+      <img src="../../static/images/portpholio/img14.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">15 / 18</div>
+      <img src="../../static/images/portpholio/img15.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">16 / 18</div>
+      <img src="../../static/images/portpholio/img16.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">17 / 18</div>
+      <img src="../../static/images/portpholio/img17.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">18 / 18</div>
+      <img src="../../static/images/portpholio/img18.jpg" style="width:100%">
+    </div>
+
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+<hr>
+{% include 'page/message.html' %}    
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+</body>
+</html>

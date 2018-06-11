@@ -1,0 +1,91 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Proskurenko D.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+   <!--  <link href="style.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  </style>
+</head>
+<body style="background-image: url({% static 'images/plant1.jpg' %})">
+    <div class="container-fluid">
+	    <div class="row">
+            <div class="col-xs-12" id = "name">
+                <h1 class="text-center"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> &nbsp;&nbsp;&nbsp;Проскуренко Дмитрий Владимирович</h1>
+            </div>
+        </div>
+    </div>
+	<nav class="navbar navbar-default navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">PROSKURENKO >>></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="education/">Образование</a></li>
+                    <li><a href="experience/">Опыт работы</a></li>
+                    <li><a href="publication/">Публикации</a></li>
+                    <li><a href="characteristic/">Характеристика</a></li>
+                    <li><a href="projects/">Проекты</a></li>
+                    
+                    <li><a href="vlog/">Видеоблог</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-10"><audio src="{% static 'music/volk.mp3' %}" width="80" controls></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2">
+                <div>
+                    <p></p>
+                </div>
+            </div>
+             
+            <div class="col-xs-10">
+                <div class="jumbotron">
+                    <h2>Авторская страница.</h2>
+                    <br>
+                    <div class="alert alert-info" role="alert" style="width: 320px; float: left; margin-right: 20px;"><img width="300 px"src="{% static 'images/proskurenko2.gif' %}" alt="Проскуренко Д.В." class="img-responsive" title="Ну, типа я"></div>
+                    <p style="font-size: 14pt;"> Добро пожаловать на страницу, где я попытался предоставить всю необходимую информацию о себе и своей деятельности.<br> Так бывает, что иногда для деловых целей необходимо предоставить резюме, CV, а иногда характеристику, портфолио, а также перечень проектов, в которых приходилось принимать участие, автобиографию, какие-то иные дополнительные сведения. Проблема в том, что резюме как правило размещают на одних специальных сайтах, автобиография на другом сайте, характеристика на третьем, а публикации, патенты также не на одном сайте собраны. Исходя из этого, возникла идея: "А почему бы не собрать всё сразу на одном сайте и при необходимости просто предоставлять ссылку на авторскую страницу, где человек, имеющий деловое предложение, может ознакомиться не только с запрашиваемой информацией, но и, возможно, с любой другой на странице?"</p>
+                </div>                
+             </div>
+             
+            </div>
+        </div>
+    </div>
+   <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-10" style="text-align: center;">
+                <div class="alert alert-danger" role="alert">
+                <h4><span class="glyphicon glyphicon-alert" aria-hidden="true"></span> &nbsp; &nbsp; &nbsp; Информация только для ознакомления в деловых целях. <br>Копирование, распространение информации ради каких-либо иных целей, без моего согласия, строго запрещается.</h4>
+                </div>    
+            </div>
+            
+        </div>
+    </div>
+    <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+    {% include 'page/message.html' %}
+</body>
+</html>

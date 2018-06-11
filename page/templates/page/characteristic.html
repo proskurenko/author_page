@@ -1,0 +1,88 @@
+﻿{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Proskurenko D.</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12" id = "name">
+                <h1 class="text-center"><span class="glyphicon glyphicon-education" aria-hidden="true"></span> &nbsp;&nbsp;&nbsp;Проскуренко Дмитрий Владимирович</h1>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">PROSKURENKO >>></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../education/">Образование</a></li>
+                    <li><a href="../experience/">Опыт работы</a></li>
+                    <li><a href="../publication/">Публикации</a></li>
+                    <li class="active"><a href="characteristic/">Характеристика</a></li>
+                    <li><a href="../projects/">Проекты</a></li>
+                   
+                    <li><a href="../vlog/">Видеоблог</a></li>
+                   
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-2"></div>
+             <div class="col-xs-8">
+                <div class="jumbotron">
+                    <h2>Характеристика</h2>
+                    <p>Однажды HR-менеджер крупной металлургической компании Украины - Interpipe (г.Днепр, Украина) посоветовала мне получить личную характеристику по системе искусственного интеллекта - HR-sniper и прикреплять её к каждому резюме.</p>
+                    <p>Пройдя тестирование, впринципе не могу не согласиться в большинстве с содержанием полученной характеристики.</p>
+                    <p>Так как это было предложено HR специалистом, а сама система - искусственный интеллект, то считаю, что результат выданный мне, вполне себе представляет независимую оценку.</p>
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Просмотреть</button>
+                </div>
+            </div>
+             <div class="col-xs-2"></div>
+         </div>
+    </div>
+
+
+    <div class="container">
+    
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Характеристика от HR-sniper</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <embed src="{{STATIC}}../static/documents/characteristic.pdf"
+                               frameborder="0" width="100%" height="400px">
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<hr>
+{% include 'page/message.html' %}
+</body>
+</html>
